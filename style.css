@@ -1,0 +1,75 @@
+/*================ DEFININDO LAYOUT DA PÁGINA ============================*/
+body {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,100px);
+    grid-template-areas: 
+    "header header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    ;
+}
+
+.header{
+    /*background-color: blueviolet;*/
+    grid-area: header;
+}
+
+.sidebar{
+   /* background-color: aqua; */
+    grid-area: sidebar;
+}
+
+.main { 
+    grid-area: main;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(5, 250px);
+    
+}
+header {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "header_inicio . header_center . . header_end";
+}
+.header_inicio {
+    grid-area: header_inicio;
+}
+.header_center {
+    grid-area: header_center;
+}
+.header_end {
+    grid-area: header_end;
+}
+/*========================ESTILIZAÇÃO DA PÁGINA===========================*/
+
+.header img {
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li{
+    text-transform: capitalize;
+    padding-top: 20px;
+    
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+}
+
+.sidebar ul li a:hover{
+    text-decoration: none;
+    color: rgb(99, 113, 116);
+}
